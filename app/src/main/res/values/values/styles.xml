@@ -1,0 +1,9 @@
+<resources>
+    <style name="CyberButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/cyber_purple</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/orbitron_medium</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+</resources>
