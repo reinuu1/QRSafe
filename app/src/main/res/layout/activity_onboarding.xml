@@ -6,4 +6,72 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_cyber_gradient">
 
+    <!-- Particule animate -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/particlesAnim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/particle"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:alpha="0.4" />
+
+    <!-- Logo scut animat -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/logoAnim"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:lottie_rawRes="@raw/intro"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_speed="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="120dp" />
+
+
+    <!-- Titlu cyber -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QR SAFE"
+        android:textSize="36sp"
+        android:textColor="#00FFAA"
+        android:fontFamily="@font/orbitron_bold"
+        android:shadowColor="#22FFCC"
+        android:shadowRadius="12"
+        app:layout_constraintTop_toBottomOf="@id/logoAnim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Subtitlu -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan &amp; Verify Links Securely"
+        android:textColor="#B3FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"/>
+
+    <!-- Buton START -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00FFAA"
+        android:fontFamily="@font/orbitron_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="100dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
