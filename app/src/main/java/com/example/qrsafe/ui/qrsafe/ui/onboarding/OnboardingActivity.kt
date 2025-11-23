@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.example.qrsafe.MainActivity
-
+import com.example.qrsafe.R
+import com.example.qrsafe.databinding.ActivityOnboardingBinding
 
 class OnboardingActivity : AppCompatActivity() {
 
@@ -16,7 +17,11 @@ class OnboardingActivity : AppCompatActivity() {
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Aplica animația de pulsare buton
+        val pulseAnim = AnimationUtils.loadAnimation(this, R.anim.pulse)
+        binding.startButton.startAnimation(pulseAnim)
 
+        // Navighează spre MainActivity cu o tranziție
         binding.startButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
