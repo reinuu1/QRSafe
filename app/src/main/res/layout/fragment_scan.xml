@@ -4,9 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_cyber_gradient"
     android:padding="20dp">
 
-    <!-- Continut centrat -->
+    <!-- Conținut centrat -->
     <LinearLayout
         android:id="@+id/centerContent"
         android:layout_width="0dp"
@@ -22,7 +23,10 @@
             android:id="@+id/titleScan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="🔍 Verifică un link sau cod QR"
             android:textSize="22sp"
+            android:textColor="@color/cyber_text"
+            android:fontFamily="@font/orbitron_bold"
             android:gravity="center"
             android:layout_marginBottom="20dp"/>
 
@@ -30,16 +34,22 @@
             android:id="@+id/urlInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Introdu un link aici..."
             android:inputType="textUri"
             android:padding="14dp"
+            android:textColor="@color/cyber_text"
             android:textColorHint="#88FFFFFF"
+            android:backgroundTint="@color/cyber_glow"
+            android:fontFamily="@font/orbitron_medium"
             android:layout_marginBottom="20dp"/>
 
         <Button
             android:id="@+id/scanButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Verifică linkul"
             android:textAllCaps="false"
+            style="@style/CyberButtonStyle"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="12dp"/>
 
@@ -47,8 +57,47 @@
             android:id="@+id/scanQrButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Scanează cod QR"
             android:textAllCaps="false"
+            style="@style/CyberButtonStyle"
             android:layout_gravity="center_horizontal"/>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/resultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="10dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#1AFFFFFF">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/urlText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://..."
+                    android:textSize="16sp"
+                    android:textColor="@color/cyber_text"
+                    android:fontFamily="@font/orbitron_medium"/>
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Statusul analizei..."
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/cyber_glow"
+                    android:fontFamily="@font/orbitron_medium"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

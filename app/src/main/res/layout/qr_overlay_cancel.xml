@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!-- Buton Cancel -->
+    <ImageButton
+        android:id="@+id/cancelScanButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="top|end"
+        android:background="@android:color/transparent"
+        app:tint="@android:color/white"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="Cancel scan" />
+
+    <!-- Text neon animat -->
+    <TextView
+        android:id="@+id/scanStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:text="Scanare activă..."
+        android:textColor="#00FF88"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#66FFAA"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="12"
+        android:alpha="0.9" />
+</FrameLayout>

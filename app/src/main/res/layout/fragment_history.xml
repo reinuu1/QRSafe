@@ -6,6 +6,7 @@
     android:padding="16dp"
     android:background="#F5F3FF">
 
+    <!-- Titlu + buton stergere -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +17,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="Istoric Scanări"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#512DA8"
@@ -25,20 +27,28 @@
             android:id="@+id/clearHistoryBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Șterge tot"
             android:textColor="#FFFFFF"
             android:backgroundTint="#7E57C2"/>
     </LinearLayout>
 
+    <!-- Text cand lista e goala -->
     <TextView
         android:id="@+id/emptyText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Nu există scanări salvate încă."
         android:textAlignment="center"
         android:textColor="#7E57C2"
         android:textSize="16sp"
         android:visibility="gone"
         android:layout_marginTop="20dp"/>
 
-
+    <!-- Lista efectiva -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/historyRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"/>
 
 </LinearLayout>

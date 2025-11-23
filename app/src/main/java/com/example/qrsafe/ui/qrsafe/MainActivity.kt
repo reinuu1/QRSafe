@@ -2,6 +2,9 @@ package com.example.qrsafe
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.qrsafe.databinding.ActivityMainBinding
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -10,5 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val navController = findNavController(R.id.nav_host_fragment)
+        binding.bottomNav.setupWithNavController(navController)
     }
 }
